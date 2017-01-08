@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.openpanda.module</groupId>
+    <artifactId>panda-module</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>Panda Module Project</name>
+    <description>Panda Module开源支撑模块</description>
+
+    <!-- 版本申明 -->
+    <licenses>
+        <license>
+            <name>Apache Software License 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <!-- 组织机构申明 -->
+    <organization>
+        <name>OpenPanda Open Source.</name>
+        <url>http://openpanda.org/</url>
+    </organization>
+
+    <!-- 子模块申明 -->
+    <modules>
+        <!-- 帐号体系模块 -->
+        <module>panda_module_account</module>
+    </modules>
+
+    <!-- 开发作者申明 -->
+    <developers>
+        <developer>
+            <id>lingenliu</id>
+            <name>lingen.liu</name>
+            <email>lingen.liu@gmail.com</email>
+            <roles>
+                <role>administrator</role>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <repositories>
+        <!-- 阿里云仓库 -->
+        <repository>
+            <id>public</id>  <!--这个ID需要与你的组group ID一致-->
+            <name>Public Repository</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        </repository>
+
+        <!-- dddlib仓库 -->
+        <repository>
+            <id>dddlib-releases</id>
+            <url>http://nexus.dddlib.org/content/groups/public-releases</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+
+        <repository>
+            <id>dddlib-snapshots</id>
+            <url>http://nexus.dddlib.org/content/groups/public-snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+
+    </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- 属性申明 -->
+    <properties>
+        <!-- dropwizard的版本 -->
+        <dropwizard.version>1.0.5</dropwizard.version>
+        <!-- dddlib的版本 -->
+        <dddlib.version>5.0.0-SNAPSHOT</dddlib.version>
+
+        <panda.microservice.version>1.0-SNAPSHOT</panda.microservice.version>
+    </properties>
+
+
+    <!-- 统一版本依赖管理 -->
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>org.openpanda.microservice</groupId>
+                <artifactId>panda-microservice-ddd-dropwizard-hibernate</artifactId>
+                <version>${panda.microservice.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openpanda.microservice</groupId>
+                <artifactId>panda-microservice-ddd-test-support</artifactId>
+                <version>${panda.microservice.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openpanda.microservice</groupId>
+                <artifactId>panda-microservice-ddd-rule</artifactId>
+                <version>${panda.microservice.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openpanda.microservice</groupId>
+                <artifactId>panda-microservice-cloud-register-etcd</artifactId>
+                <version>${panda.microservice.version}</version>
+            </dependency>
+
+            <!-- dropwizard仓库依赖 -->
+            <dependency>
+                <groupId>io.dropwizard</groupId>
+                <artifactId>dropwizard-testing</artifactId>
+                <version>${dropwizard.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <!-- H2 Driver的依赖 -->
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>1.4.193</version>
+            </dependency>
+
+            <!-- dropwizard仓库依赖 -->
+            <dependency>
+                <groupId>io.dropwizard</groupId>
+                <artifactId>dropwizard-core</artifactId>
+                <version>${dropwizard.version}</version>
+            </dependency>
+
+            <!-- dropwizard的hibernate实现 -->
+            <dependency>
+                <groupId>io.dropwizard</groupId>
+                <artifactId>dropwizard-hibernate</artifactId>
+                <version>${dropwizard.version}</version>
+            </dependency>
+
+
+
+            <!-- 指定使用Hibernate 的版本-->
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>5.2.3.Final</version>
+            </dependency>
+
+            <!-- 解决一个兼容性的冲突问题-->
+            <dependency>
+                <groupId>org.jadira.usertype</groupId>
+                <artifactId>usertype.core</artifactId>
+                <version>6.0.1.GA</version>
+            </dependency>
+
+            <!-- 依赖 DDD DOMAIN -->
+            <dependency>
+                <groupId>org.dayatang.dddlib</groupId>
+                <artifactId>dddlib-domain</artifactId>
+                <version>${dddlib.version}</version>
+            </dependency>
+
+            <!-- 依赖 DDD GUICE -->
+            <dependency>
+                <groupId>org.dayatang.dddlib</groupId>
+                <artifactId>dddlib-ioc-guice</artifactId>
+                <version>${dddlib.version}</version>
+            </dependency>
+
+            <!-- 依赖 DDD Hibernate-->
+            <dependency>
+                <groupId>org.dayatang.dddlib</groupId>
+                <artifactId>dddlib-persistence-hibernate</artifactId>
+                <version>${dddlib.version}</version>
+            </dependency>
+
+            <!-- 依赖 DDD QueryChannel-->
+            <dependency>
+                <groupId>org.dayatang.dddlib</groupId>
+                <artifactId>dddlib-query-channel</artifactId>
+                <version>${dddlib.version}</version>
+            </dependency>
+
+
+
+            <!-- GSON的依赖 -->
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>2.8.0</version>
+            </dependency>
+
+            <!-- JUNIT的依赖 -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+            </dependency>
+
+            <!-- etcd的依赖 -->
+            <dependency>
+                <groupId>io.fastjson</groupId>
+                <artifactId>etcd-client</artifactId>
+                <version>0.34</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>
