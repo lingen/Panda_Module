@@ -146,87 +146,13 @@
                 <version>1.4.193</version>
             </dependency>
 
-            <!-- dropwizard仓库依赖 -->
-            <dependency>
-                <groupId>io.dropwizard</groupId>
-                <artifactId>dropwizard-core</artifactId>
-                <version>${dropwizard.version}</version>
-            </dependency>
-
-            <!-- dropwizard的hibernate实现 -->
-            <dependency>
-                <groupId>io.dropwizard</groupId>
-                <artifactId>dropwizard-hibernate</artifactId>
-                <version>${dropwizard.version}</version>
-            </dependency>
-
-
-
-            <!-- 指定使用Hibernate 的版本-->
-            <dependency>
-                <groupId>org.hibernate</groupId>
-                <artifactId>hibernate-core</artifactId>
-                <version>5.2.3.Final</version>
-            </dependency>
-
             <!-- 解决一个兼容性的冲突问题-->
             <dependency>
                 <groupId>org.jadira.usertype</groupId>
                 <artifactId>usertype.core</artifactId>
                 <version>6.0.1.GA</version>
             </dependency>
-
-            <!-- 依赖 DDD DOMAIN -->
-            <dependency>
-                <groupId>org.dayatang.dddlib</groupId>
-                <artifactId>dddlib-domain</artifactId>
-                <version>${dddlib.version}</version>
-            </dependency>
-
-            <!-- 依赖 DDD GUICE -->
-            <dependency>
-                <groupId>org.dayatang.dddlib</groupId>
-                <artifactId>dddlib-ioc-guice</artifactId>
-                <version>${dddlib.version}</version>
-            </dependency>
-
-            <!-- 依赖 DDD Hibernate-->
-            <dependency>
-                <groupId>org.dayatang.dddlib</groupId>
-                <artifactId>dddlib-persistence-hibernate</artifactId>
-                <version>${dddlib.version}</version>
-            </dependency>
-
-            <!-- 依赖 DDD QueryChannel-->
-            <dependency>
-                <groupId>org.dayatang.dddlib</groupId>
-                <artifactId>dddlib-query-channel</artifactId>
-                <version>${dddlib.version}</version>
-            </dependency>
-
-
-
-            <!-- GSON的依赖 -->
-            <dependency>
-                <groupId>com.google.code.gson</groupId>
-                <artifactId>gson</artifactId>
-                <version>2.8.0</version>
-            </dependency>
-
-            <!-- JUNIT的依赖 -->
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.12</version>
-            </dependency>
-
-            <!-- etcd的依赖 -->
-            <dependency>
-                <groupId>io.fastjson</groupId>
-                <artifactId>etcd-client</artifactId>
-                <version>0.34</version>
-            </dependency>
-
+            
         </dependencies>
     </dependencyManagement>
 
