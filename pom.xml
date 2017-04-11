@@ -28,8 +28,9 @@
 
     <!-- 子模块申明 -->
     <modules>
-        <!-- 帐号体系模块 -->
-        <module>panda_module_account</module>
+        <!-- account module -->
+        <module>panda-module-account</module>
+        <module>panda-module-sms</module>
     </modules>
 
     <!-- 开发作者申明 -->
@@ -91,18 +92,17 @@
         </plugins>
     </build>
 
-    <!-- 属性申明 -->
     <properties>
-        <!-- dropwizard的版本 -->
+        <!-- dropwizard version -->
         <dropwizard.version>1.0.5</dropwizard.version>
-        <!-- dddlib的版本 -->
+        <!-- dddlib version -->
         <dddlib.version>5.0.0-SNAPSHOT</dddlib.version>
 
         <panda.microservice.version>1.0-SNAPSHOT</panda.microservice.version>
     </properties>
 
 
-    <!-- 统一版本依赖管理 -->
+    <!-- dependencies management -->
     <dependencyManagement>
         <dependencies>
 
@@ -137,6 +137,12 @@
                 <artifactId>dropwizard-testing</artifactId>
                 <version>${dropwizard.version}</version>
                 <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>io.dropwizard</groupId>
+                <artifactId>dropwizard-core</artifactId>
+                <version>${dropwizard.version}</version>
             </dependency>
 
             <!-- H2 Driver的依赖 -->

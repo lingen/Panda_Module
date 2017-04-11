@@ -8,6 +8,4 @@ import org.openpanda.microservice.dropwizard.hibernate.PandaConfiguration;
  */
 public class Configuration extends PandaConfiguration {
 
-
-
 }

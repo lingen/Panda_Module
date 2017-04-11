@@ -102,7 +102,7 @@ public class AccountApplicationImpl implements AccountApplication {
 
     @UnitOfWork
     public List<AccountDTO> queryAccount(String key){
-        List<Account> accounts = null;
+        List<Account> accounts;
 
         if (StringUtils.isEmpty(key)){
             accounts = queryChannelService.createJpqlQuery(Account_Find_All).list();
@@ -118,7 +118,7 @@ public class AccountApplicationImpl implements AccountApplication {
 
     @UnitOfWork
     public PandaPage<AccountDTO> queryAccountInPage(String key,int page,int pagesize){
-        Page<Account> pageResult = null;
+        Page<Account> pageResult;
         int pageIndex = pagesize * ( page - 1 );
 
         if (StringUtils.isEmpty(key)){
