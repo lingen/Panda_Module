@@ -11,7 +11,7 @@
     <name>Panda Module Project</name>
     <description>Panda Module开源支撑模块</description>
 
-    <!-- 版本申明 -->
+    <!-- 版权申明 -->
     <licenses>
         <license>
             <name>Apache Software License 2.0</name>
@@ -158,7 +158,7 @@
                 <artifactId>usertype.core</artifactId>
                 <version>6.0.1.GA</version>
             </dependency>
-            
+
         </dependencies>
     </dependencyManagement>
 

@@ -3,27 +3,24 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>panda-module</artifactId>
+        <artifactId>panda-module-sms</artifactId>
         <groupId>org.openpanda.module</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>panda-module-sms</artifactId>
-    <packaging>pom</packaging>
-    <name>Panda Module Sms</name>
-    <description>Panda Module which provider sms services</description>
-    <modules>
-        <module>panda-module-sms-api</module>
-        <module>panda-module-sms-api-yunpian</module>
-        <module>panda-module-sms-microservice</module>
-    </modules>
+    <artifactId>panda-module-sms-microservice</artifactId>
+    <name>Panda Module Sms Microservice</name>
+    <description>短信服务的微服务接口</description>
+
 
     <dependencies>
 
-
+        <!-- dropwizard核心依赖 -->
+        <dependency>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-core</artifactId>
+        </dependency>
 
     </dependencies>
-
-
 </project>
