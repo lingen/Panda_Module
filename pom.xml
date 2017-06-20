@@ -99,6 +99,8 @@
         <dddlib.version>5.0.0-SNAPSHOT</dddlib.version>
 
         <panda.microservice.version>1.0-SNAPSHOT</panda.microservice.version>
+
+        <pandalib.version>1.0-SNAPSHOT</pandalib.version>
     </properties>
 
 
@@ -157,6 +159,12 @@
                 <groupId>org.jadira.usertype</groupId>
                 <artifactId>usertype.core</artifactId>
                 <version>6.0.1.GA</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openpanda.pandalib</groupId>
+                <artifactId>pandalib-http</artifactId>
+                <version>${pandalib.version}</version>
             </dependency>
 
         </dependencies>

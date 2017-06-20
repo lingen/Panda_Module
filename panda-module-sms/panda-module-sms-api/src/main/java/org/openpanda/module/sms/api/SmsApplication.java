@@ -6,25 +6,17 @@ package org.openpanda.module.sms.api;
 public interface SmsApplication {
 
     /**
-     * Send Message to mobile with fixed content
-     * @param mobile
-     * @param content
-     */
-    void sendSms(String mobile,String content);
-
-    /**
      * Send a code message to mobile with fixed template
      * @param mobile
      * @param template
      */
-    void sendValidCode(String mobile,String template);
-
+    void sendMsg(String mobile, String template);
 
     /**
-     * Valid Code
-     * @param mobile
-     * @param code
+     * send message to multi mobiles
+     * @param mobiles
+     * @param template
      */
-    void checkValidCode(String mobile,String code);
+    void sendMsgs(String[] mobiles,String template);
 
 }
