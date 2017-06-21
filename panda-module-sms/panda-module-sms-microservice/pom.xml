@@ -22,5 +22,26 @@
             <artifactId>dropwizard-core</artifactId>
         </dependency>
 
+        <!-- 短信网关的接口 -->
+        <dependency>
+            <groupId>org.openpanda.module</groupId>
+            <artifactId>panda-module-sms-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- 云片网短信网关的实现 -->
+        <dependency>
+            <groupId>org.openpanda.module</groupId>
+            <artifactId>panda-module-sms-api-yunpian</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 </project>
