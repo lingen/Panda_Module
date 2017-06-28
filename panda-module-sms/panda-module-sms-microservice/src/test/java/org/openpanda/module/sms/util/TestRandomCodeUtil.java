@@ -20,5 +20,5 @@ public class TestRandomCodeUtil {
             System.out.println(RandomCodeUtil.randomFour());
         }
     }
-    
+
 }
