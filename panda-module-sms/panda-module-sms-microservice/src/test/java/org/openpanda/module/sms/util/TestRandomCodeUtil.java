@@ -13,4 +13,11 @@ public class TestRandomCodeUtil {
             System.out.println(RandomCodeUtil.randomSix());
         }
     }
+
+    @Test
+    public void testRandomFour(){
+        for (int i=0;i<100;i++){
+            System.out.println(RandomCodeUtil.randomFour());
+        }
+    }
 }
