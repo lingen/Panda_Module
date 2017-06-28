@@ -167,6 +167,12 @@
                 <version>${pandalib.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.dayatang.dddlib</groupId>
+                <artifactId>dddlib-cache-redis</artifactId>
+                <version>${dddlib.version}</version>
+            </dependency>
+
             <!-- JUnit实现-->
             <dependency>
                 <groupId>junit</groupId>

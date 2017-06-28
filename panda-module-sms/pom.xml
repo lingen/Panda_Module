@@ -21,6 +21,10 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>org.dayatang.dddlib</groupId>
+            <artifactId>dddlib-cache-redis</artifactId>
+        </dependency>
 
 
     </dependencies>
