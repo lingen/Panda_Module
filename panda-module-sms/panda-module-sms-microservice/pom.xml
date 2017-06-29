@@ -37,6 +37,11 @@
         </dependency>
 
         <dependency>
+            <groupId>org.openpanda.microservice</groupId>
+            <artifactId>panda-microservice-ddd-rule</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
